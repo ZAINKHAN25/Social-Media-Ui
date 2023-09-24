@@ -1,0 +1,76 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f5f9fc;
+}
+
+.firstsidebar{
+  min-width: 300px;
+  max-width: 100vw;
+  background-color: #f5f9fc;
+  min-height: 100vh;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.secondsidebar{
+  padding: 20px 10px;
+  min-width: 500px;
+  max-width: 100vw;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.thirdsidebar{
+  min-width: 300px;
+  max-width: 100vw;
+  background-color: #f4f9fd;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.siglegroupdiv, .siglefrienddiv{
+  box-shadow: 1px 1px 5px rgba(0,0,0, 30%);
+  transition: all .3s;
+}
+
+.siglegroupdiv:hover, .siglefrienddiv:hover{
+  background-color: rgba(0,0,0, 10%);
+}
+
+
+.logooffirst{
+  object-fit: contain;
+  width: 50px;
+}
+
+.searchboxfirstinput{
+  height: 50px;
+}
+
+.imgofgroupsinglediv, .imgoffriendsinglediv{
+  width: 40px;
+  border-radius: 100%;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.logintrue{
+  padding: 5px;
+  border-radius: 100%;
+  background-color: #0eeabc;
+  /* float: right; */
+  margin-left: auto;
+}
