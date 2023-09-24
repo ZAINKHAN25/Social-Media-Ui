@@ -88,10 +88,25 @@ const mainpostarr = [
   }
 ]
 
+
+// messages arr of third bard
+const messagefrndarr = [
+  {
+    frndname: 'Shabir',
+    frndimgurl: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-1222271.jpg&fm=jpg',
+    frndlastmessage: 'hy Zain' 
+  },
+  {
+    frndname: 'Hassan',
+    frndimgurl: 'https://st3.depositphotos.com/1017228/18878/i/450/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg',
+    frndlastmessage: 'Kya hal hy' 
+  }
+]
+
 // main body of react js
 function App() {
   return (
-    <div className="bodyone d-flex flex-wrap justify-content-center align-itmes-stretch">
+    <div className="bodyone d-flex flex-wrap justify-content-around align-itmes-stretch">
       <Firstsidebar />
       <Secondsidebar />
       <Thirdsidebar />
@@ -153,7 +168,27 @@ function Secondsidebar() {
 function Thirdsidebar() {
   return (
     <div className='thirdsidebar'>
-      hello world
+      <div className='nofificationndprofilearea d-flex'>
+        <button type="button" class="btn position-relative">
+        <i class="fa-regular fa-bell fs-4"></i>
+          <span class="position-absolute bottom-30 start-90 translate-middle badge rounded-pill bg-danger">
+            5
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button>
+        <div className='ms-3 loginpersondiv d-flex align-items-center'>
+          <img className='imgofstatus' src={friendsdata[0].frinedimgurl} alt=""/>
+          <h5>{friendsdata[0].friendname}</h5>
+        </div>
+      </div>
+      <h5 className='mt-5 mb-3'>Sponser's</h5>
+      <div>
+        <img className='sponserimg' src={"https://static.clubs.nfl.com/image/private/f_auto/buccaneers/ydqh7jyty5wkeg54nfnv"} alt=""/>
+      </div>
+      <h5 className='mt-3 mb-3'>Message's</h5>
+      <div className='messagefrnddiv d-flex flex-column'>
+        {messagefrndarr.map((x,i)=> <Singlefrndmessagediv data={x} key={i}/>)}
+      </div>
     </div>
   )
 }
@@ -227,6 +262,24 @@ function Singlepostdiv({ data }) {
           <p className='fs-5 my-auto'>{data.likes}</p>
         </div>
         <p className='mt-2'>{data.veiws} Veiws</p>
+      </div>
+    </div>
+  )
+}
+
+
+// thrid bar
+function Singlefrndmessagediv({data}){
+  return (
+    <div className='d-flex my-2 me-3 p-2 rounded shadow singlemessagediv'>
+      <img className='imgofmessage' src={data.frndimgurl} alt=""/>
+      <div className='d-flex flex-column'>
+        <div className='fw-bold'>
+          {data.frndname}
+        </div>
+        <div>
+          {data.frndlastmessage}
+        </div>
       </div>
     </div>
   )
