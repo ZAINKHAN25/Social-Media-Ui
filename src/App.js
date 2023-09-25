@@ -169,11 +169,11 @@ function Thirdsidebar() {
   return (
     <div className='thirdsidebar'>
       <div className='nofificationndprofilearea d-flex'>
-        <button type="button" class="btn position-relative">
-        <i class="fa-regular fa-bell fs-4"></i>
-          <span class="position-absolute bottom-30 start-90 translate-middle badge rounded-pill bg-danger">
+        <button type="button" className="btn position-relative">
+        <i className="fa-regular fa-bell fs-4"></i>
+          <span className="position-absolute bottom-30 start-90 translate-middle badge rounded-pill bg-danger">
             5
-            <span class="visually-hidden">unread messages</span>
+            <span className="visually-hidden">unread messages</span>
           </span>
         </button>
         <div className='ms-3 loginpersondiv d-flex align-items-center'>
@@ -253,9 +253,9 @@ function Singlepostdiv({ data }) {
         <div className='d-flex likefather align-items-center'>
           {
             data.ismelike === true ? (
-              <i class="fa-solid fa-thumbs-up veiwtrue fs-2 me-2 "></i>
+              <i className="fa-solid fa-thumbs-up veiwtrue fs-2 me-2 "></i>
             ) : (
-              <i class="fa-solid fa-thumbs-up fs-2 me-2 notveiwtrue"></i>
+              <i className="fa-solid fa-thumbs-up fs-2 me-2 notveiwtrue"></i>
             )
 
           }
